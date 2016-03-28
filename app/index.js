@@ -1,13 +1,17 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router'
 
-var HelloWorld = React.createClass({
+var Home = React.createClass({
 	render: function () {
-		return <div> Hello React! </div>
+		return <div> Home </div>
 	}
 });
 
-ReactDOM.render(
-		<HelloWorld />,
+ReactDOM.render((
+	  <Router history={hashHistory}>
+			<Route path="/" component={Home}/>
+		</Router>
+  ),
 	document.getElementById('app')
 );
