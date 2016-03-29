@@ -16,10 +16,10 @@ var Home = React.createClass({
 						<BoxButton first="EXPUNGE " second="HOW" third="-TO" link="/howto" /> 
 					</div>
 					<div className="col-md-4">
-						<BoxButton first="AM " second="I " third="ELIGIBLE?" link="/eligible" /> 
+						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" /> 
 					</div>
 					<div className="col-md-4">
-						<BoxButton first="FAQ " second="AND" third="RESOURCES" link="/resources" /> 
+						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" /> 
 					</div>
 				</div>
 			</div>
