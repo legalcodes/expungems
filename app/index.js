@@ -4,7 +4,7 @@ import { Router, Route, hashHistory, Link } from 'react-router'
 import HowTo from './HowTo'
 import Eligible from './Eligible'
 import Resources from './Resources'
-import BoxButton from './BoxButton'
+import BoxButton from './BoxButton/BoxButton'
 require("./style.css");
 
 var Home = React.createClass({
@@ -12,15 +12,9 @@ var Home = React.createClass({
 		return (
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-md-4">
-						<BoxButton first="EXPUNGE " second="HOW" third="-TO" link="/howto" /> 
-					</div>
-					<div className="col-md-4">
-						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" /> 
-					</div>
-					<div className="col-md-4">
-						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" /> 
-					</div>
+						<BoxButton first="EXPUNGE " second="HOW" third="-TO" link="/howto" order="box1" />
+						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" order="box2" />
+						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" order="box3" />
 				</div>
 			</div>
 		)
