@@ -12,9 +12,9 @@ var Home = React.createClass({
 		return (
 			<div className="container-fluid">
 				<div className="row">
-						<BoxButton first="EXPUNGE " second="HOW" third="-TO" link="/howto" order="box1" />
-						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" order="box2" />
-						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" order="box3" />
+						<BoxButton first="EXPUNGE " third="HOW-TO" link="/howto" order="box1" firstLine="#9BA3AE" />
+						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
+						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
 				</div>
 			</div>
 		)

@@ -9,9 +9,9 @@ export default React.createClass({
 					<div className="col-md-4" id={this.props.order}>
 						<h2>
 							<Link to={this.props.link}>
-								<span>{this.props.first}</span>
-								<span>{this.props.second}</span>
-								<span>{this.props.third}</span>
+								<span style={{ color: this.props.firstLine }}>{this.props.first}</span>
+								<span style={{ color: this.props.firstLine }}>{this.props.second}</span>
+								<div>{this.props.third}</div>
 							</Link>
 						</h2>
 					</div>

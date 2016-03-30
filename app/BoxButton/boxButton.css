@@ -1,11 +1,18 @@
 #box1 {
-		background-color: green;
+		background-color: #2A2A2A;
+		padding: 35px;
 }
 
 #box2 {
-		background-color: red;
+		background-color: #650000;
+		padding: 35px;
 }
 
 #box3 {
-		background-color: blue;
+		background-color: #9BA3AE;
+		padding: 35px;
+}
+
+h2 {
+		font-size: 40px;
 }
