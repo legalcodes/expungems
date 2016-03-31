@@ -18,7 +18,8 @@ var Home = React.createClass({
 						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
 				</div>
 				<div className="row">
-						<InfoBox first="77 MILLION" second="AMERICANS HAVE" third="A CRIMINAL RECORD" link="/resources" firstLine="#2A2A2A" />
+						<InfoBox first="77 MILLION" second="AMERICANS HAVE" third="A CRIMINAL RECORD" link="/resources"
+				firstLine="#9BA3AE" secondLine="fff" thirdLine="#650000" />
 				</div>
 			</div>
 		);

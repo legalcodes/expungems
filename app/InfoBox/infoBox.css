@@ -1,5 +1,19 @@
-.line1 {
-		font-size: 70px;
-};
-line2 {};
-line3 {};
+div.firstLine {
+		font-size: 78px;
+		font-weight: bold;
+}
+div.secondLine {
+		font-weight: bold;
+		font-size: 38px;
+		line-height: 25px;
+}
+div.thirdLine {
+		font-weight: bold;
+		font-size: 29px;
+		line-height: 58px;
+}
+div.centered {
+		font-family: 'Oswald', sans-serif;
+		padding: 60px 0px;
+		text-align: center;
+}
