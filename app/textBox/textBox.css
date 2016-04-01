@@ -1,5 +1,6 @@
 div.frontCopy{
-		padding: 10%;
+		padding: 8%;
+		padding-left: 0px;
 }
 
 p {
@@ -7,5 +8,4 @@ p {
 		font-size: 18px;
 		color: #fff;	
 		line-height: 33px;
-
 }
