@@ -10,7 +10,9 @@ export default React.createClass({
 		render() {
 				return (
 						    <div className={this.props.grid}>
-									{this.props.content}
+									<div className="frontCopy">
+										{this.props.content}
+									</div>
 								</div>
 				)
 		}

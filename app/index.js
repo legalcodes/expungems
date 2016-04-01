@@ -10,7 +10,7 @@ import TextBox from './TextBox/TextBox';
 require("./style.css");
 
 
-var frontText=<div><p> If you have a criminal record, you may have been arrested but never charged, never prosecuted, or found guilty. Still, the incident could be preventing you from achieving your goals. This problem disproportionately plagues minority communities.</p><p>Expungement is not DIY-friendly, and private legal help is expensive. ExpungeMD.org was created to address these shortcomings.</p></div> 
+var frontText=<div><p> If you have a criminal record, you may have been arrested but never charged, never prosecuted, or found guilty. Still, the incident could be preventing you from achieving your goals. This problem disproportionately plagues minority communities.</p><p>Expungement is not DIY-friendly, and private legal help is expensive. ExpungeMS.org was created to address these shortcomings.</p></div> 
 
 
 var Home = React.createClass({
@@ -27,7 +27,7 @@ var Home = React.createClass({
 				<div className="row">
 						<InfoBox first="77 MILLION" second="AMERICANS HAVE" third="A CRIMINAL RECORD" link="/resources"
 				firstLine="#9BA3AE" secondLine="fff" thirdLine="#650000" />
-						<TextBox grid="<div className=col-md=7>" content={frontText} />
+						<TextBox grid="col-md-7" content={frontText} />
 				</div>
 			</div>
 		);
