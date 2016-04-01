@@ -1,0 +1,14 @@
+h3 {
+		font-size:33px;
+		font-family: 'Oswald', sans-serif;
+		display: inline;
+		color: black;
+
+}
+span {
+		display: inline-block;
+}
+
+img {
+		width: 50%;
+}
