@@ -14,7 +14,7 @@ export default React.createClass({
 									<div className="container">
 										<div className="col-xs-3" >
 											<h3>
-												EXPUNGE MS
+												EXPUNGE MISSISSIPPI
 											</h3>
 										</div>
 										<div className="col-xs-3" >

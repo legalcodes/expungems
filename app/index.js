@@ -13,9 +13,6 @@ import Bars from './Bars/Bars';
 import Menu from './Menu/Menu';
 require("./style.css");
 
-//window.addEventListener("beforeunload", function () {
-	//	document.body.classList.add("animate-out");
-// });
 
 var Home = React.createClass({
 	render: function () {
