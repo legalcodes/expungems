@@ -10,30 +10,32 @@ export default React.createClass({
 		render() {
 				return (
 						<div>
-								<nav className="navbar navbar-default navbar-fixed-top">
+								<div className="barsBackground">
 									<div className="container">
-										<div className="col-md-3" >
+										<div className="col-xs-3" >
 											<h3>
 												EXPUNGE MS
 											</h3>
 										</div>
-										<div className="col-md-3" >
-											<span>
-												<img src={ mail }/>
-											</span>
+										<div className="col-xs-3" >
 										</div>
-										<div className="col-md-3" >
+										<div className="col-xs-2" >
 											<span>
 												<img src={ twitter }/>
 											</span>
 										</div>
-										<div className="col-md-3" >
+										<div className="col-xs-2" >
 											<span>
 												<img src={ site }/>
 											</span>
 										</div>
+										<div className="col-xs-2" >
+											<span>
+												<img src={ mail }/>
+											</span>
+										</div>
 									</div>
-								</nav>
+								</div>
 						</div>
 				)
 		}

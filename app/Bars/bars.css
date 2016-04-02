@@ -3,6 +3,7 @@ h3 {
 		font-family: 'Oswald', sans-serif;
 		display: inline;
 		color: black;
+		font-weight: bold;
 
 }
 span {
@@ -11,4 +12,8 @@ span {
 
 img {
 		width: 50%;
+}
+
+div.barsBackground {
+		background-color: white;
 }

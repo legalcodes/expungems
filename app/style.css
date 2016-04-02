@@ -1,9 +1,19 @@
 body {
     background-color: #000;
 		color: white;
+		animation: fadeIn .9s;
 }
 
 a {
 		color: white;
 		font-family: 'Oswald', sans-serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

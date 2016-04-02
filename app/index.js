@@ -18,12 +18,12 @@ var frontText=<div><p> If you have a criminal record, you may have been arrested
 var Home = React.createClass({
 	render: function () {
 		return (
-			<div className="container-fluid">
+			<div>
 				<Bars/>
 				<div className="row">
 						<BoxButton first="EXPUNGE " third="HOW-TO" link="/howto" order="box1" firstLine="#9BA3AE" />
-						<BoxButton first="AM " second="I " third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
-						<BoxButton first="FAQ " second="& " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
+						<BoxButton first="AM  I" third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
+						<BoxButton first="FAQ & " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
 				</div>
 				<div className="row">
 				</div>
