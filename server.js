@@ -6,7 +6,7 @@ var app = express();
 
 var port = process.env.PORT;
 
-app.use(express.static('assets'));
+app.use(express.static('app/assets'));
 
 var static_path = path.join(__dirname, 'dist/');
 
