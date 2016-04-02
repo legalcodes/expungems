@@ -4,6 +4,9 @@ import { Router, Route, hashHistory, Link } from 'react-router'
 require("./boxButton.css");
 
 export default React.createClass({
+//		componentWillUnmount: function() {
+				// document.body.classList.add("animate-out");
+	//	},
 		render() {
 				return (
 					<div className="col-md-4" id={this.props.order}>
