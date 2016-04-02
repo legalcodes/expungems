@@ -22,5 +22,3 @@ app.use(express.static(static_path))
 		}
 	});
 
-
-
