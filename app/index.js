@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, Link } from 'react-router';
+import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
 
 import HowTo from './HowTo';
 import Eligible from './Eligible/Eligible';
@@ -28,6 +28,7 @@ var Home = React.createClass({
 ReactDOM.render((
 	  <Router history={hashHistory}>
 				<Route path="/" component={Home}>
+					<IndexRoute component={Menu}/>
 					<Route path="/menu" component={Menu}/>
 					<Route path="/howto" component={HowTo}/>
 					<Route path="/eligible" component={Eligible}/>
