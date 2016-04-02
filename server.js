@@ -2,17 +2,11 @@ var express = require('express');
 var path = require('path');
 var env = require('node-env-file');
 
-
-// var isDevelopment = (process.env.NODE_ENV !== 'production');
-
-// var env = env(__dirname + '/env');
 var app = express();
-
-// app.use(bodyParser());
 
 var port = process.env.PORT;
 
-app.use(express.static(__dirname + './assets'));
+app.use(express.static(__dirname + '/assets'));
 
 var static_path = path.join(__dirname, 'dist/');
 
