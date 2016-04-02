@@ -23,9 +23,6 @@ var Home = React.createClass({
 			<div>
 				<Bars/>
 				{this.props.children}
-				<div className="row">
-						<FinePrint grid="col-md-10" />
-				</div>
 			</div>
 		);
 	}

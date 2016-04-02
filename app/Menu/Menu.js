@@ -5,6 +5,7 @@ import { Router, Route, hashHistory, Link } from 'react-router';
 import BoxButton from '../BoxButton/BoxButton';
 import InfoBox from '../InfoBox/InfoBox';
 import TextBox from '../TextBox/TextBox';
+import FinePrint from '../FinePrint/FinePrint'
 
 require("./menu.css");
 
@@ -26,7 +27,10 @@ export default React.createClass({
 										firstLine="#9BA3AE" secondLine="fff" thirdLine="#650000" />
 									<TextBox grid="col-md-7" content={frontText} />
 								</div>
-						</div>
+								<div className="row">
+									<FinePrint grid="col-md-10" />
+								</div>
+					</div>
 				)
 		}
 })
