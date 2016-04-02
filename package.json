@@ -4,8 +4,10 @@
   "description": "Online expungement eligibility checker for the state of Mississippi.",
   "main": "index.js",
   "scripts": {
+		"postinstall": "webpack --config ./webpack-production.config.js --progress --colors",
     "prod": "webpack -p",
-    "start": "webpack-dev-server"
+		"start": "node server.js",
+			"dev": "webpack-dev-server"
   },
   "author": "ExpungeUS.org",
   "license": "ISC",
