@@ -7,11 +7,9 @@ var app = express();
 
 var port = process.env.PORT;
 
-app.use(express.static('./dist'));
+// var static_path = path.join('.', __dirname, 'dist/');
 
-var static_path = path.join('.', __dirname, 'dist/');
-
-app.use(express.static(static_path))
+app.use(express.static(path.join(__dirname, '../..', 'dist')))
 	.get('/', function (req, res) {
 		res.sendFile('index.html', {
 			root: static_path,
