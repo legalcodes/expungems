@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, Link } from 'react-router';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import BoxButton from '../BoxButton/BoxButton';
 import InfoBox from '../InfoBox/InfoBox';
 import TextBox from '../TextBox/TextBox';
@@ -15,6 +16,8 @@ export default React.createClass({
 		render() {
 				return (
 						<div>
+							<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300}>
+
 								<div className="row">
 									<BoxButton first="EXPUNGE " third="HOW-TO" link="/howto" order="box1" firstLine="#9BA3AE" />
 									<BoxButton first="AM  I" third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
@@ -30,6 +33,7 @@ export default React.createClass({
 								<div className="row">
 									<FinePrint grid="col-md-10" />
 								</div>
+						</ReactCSSTransitionGroup>
 					</div>
 				)
 		}

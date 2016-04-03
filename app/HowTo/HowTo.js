@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import FinePrint from '../FinePrint/FinePrint'
-require('./howto.css')
+import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import FinePrint from '../FinePrint/FinePrint';
+require('./howto.css');
 
 
 export default React.createClass({
