@@ -16,24 +16,32 @@ export default React.createClass({
 									<div className="container">
 										<div className="col-xs-3" >
 											<h3>
-												EXPUNGE MISSISSIPPI
+								        <a href="/">
+													EXPUNGE MISSISSIPPI
+						            </a>
 											</h3>
 										</div>
 										<div className="col-xs-3" >
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ twitter }/>
+								<a target="_blank" href="http://twitter.com/expungeus">
+													<img src={ twitter }/>
+								        </a>
 											</span>
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ site }/>
+								<a target="_blank" href="http://expungeus.org">
+													<img src={ site }/>
+								        </a>
 											</span>
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ mail }/>
+												<a href="mailto:jon@expungeus.org">
+													<img src={ mail }/>
+								        </a>
 											</span>
 										</div>
 									</div>
