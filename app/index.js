@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
 
-import HowTo from './HowTo';
+import HowTo from './HowTo/HowTo';
 import Eligible from './Eligible/Eligible';
 import Resources from './Resources';
 import BoxButton from './BoxButton/BoxButton';
@@ -11,6 +11,8 @@ import TextBox from './TextBox/TextBox';
 import FinePrint from './FinePrint/FinePrint';
 import Bars from './Bars/Bars';
 import Menu from './Menu/Menu';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 require("./style.css");
 
 
