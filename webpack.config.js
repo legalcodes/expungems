@@ -18,6 +18,7 @@ module.exports = {
 			{test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
 			{ test: /\.css$/, loader: "style-loader!css-loader" },
 			{ test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" },
+			{test: /\.(png|jpg)$/, loader: 'url?limit=25000'}
     ]
   },
   plugins: [HTMLWebpackPluginConfig]

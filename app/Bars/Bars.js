@@ -21,7 +21,7 @@ export default React.createClass({
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ twitter }/>
+												<img src={require(‘../Assets/social.png’)} />
 											</span>
 										</div>
 										<div className="col-xs-2" >
