@@ -17,8 +17,7 @@ module.exports = {
     loaders: [
 			{test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
 			{ test: /\.css$/, loader: "style-loader!css-loader" },
-			{ test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" },
-			{ test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' }
+			{ test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" }
     ]
   },
   plugins: [HTMLWebpackPluginConfig]

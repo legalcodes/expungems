@@ -9,7 +9,7 @@ var port = process.env.PORT;
 
 app.use(express.static('./dist'));
 
-var static_path = path.join(__dirname, 'dist/');
+var static_path = path.join('.', __dirname, 'dist/');
 
 app.use(express.static(static_path))
 	.get('/', function (req, res) {
