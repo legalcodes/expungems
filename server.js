@@ -23,4 +23,3 @@ app.use(express.static(static_path))
 			console.log('Listening at localhost:', process.env.PORT);
 		}
 	});
-
