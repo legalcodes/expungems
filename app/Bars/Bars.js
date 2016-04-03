@@ -18,17 +18,15 @@ export default React.createClass({
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={require(‘../Assets/social.png’)} />
+												<img src={require('../Assets/social.png')} />
 											</span>
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ site }/>
 											</span>
 										</div>
 										<div className="col-xs-2" >
 											<span>
-												<img src={ mail }/>
 											</span>
 										</div>
 									</div>
