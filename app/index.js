@@ -13,8 +13,8 @@ import Bars from './Bars/Bars';
 import Menu from './Menu/Menu';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
+require("./directedGraph.js");
 require("./style.css");
-
 
 var Home = React.createClass({
 	render: function () {

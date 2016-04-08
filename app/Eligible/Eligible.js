@@ -6,7 +6,7 @@ export default React.createClass({
 	render() {
 			return (
 					<div className="text-center">
-						<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300}>
+							<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={100} transitionLeaveTimeout={100}>
 							<h2 className="fromTop">
 									DISCLAIMER
 							</h2>
