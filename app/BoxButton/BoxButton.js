@@ -9,7 +9,7 @@ export default React.createClass({
 	//	},
 		render() {
 				return (
-					<div className="col-md-4" id={this.props.order}>
+					<div className="col-lg-4" id={this.props.order}>
 						<h2>
 							<Link to={this.props.link}>
 								<span style={{ color: this.props.firstLine }}>{this.props.first}</span>

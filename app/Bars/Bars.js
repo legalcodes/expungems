@@ -14,30 +14,30 @@ export default React.createClass({
 						<div>
 								<div className="barsBackground">
 									<div className="container">
-										<div className="col-xs-3" >
+										<div className="col-sm-3" >
 											<h3>
 								        <a href="/">
 													EXPUNGE MISSISSIPPI
 						            </a>
 											</h3>
 										</div>
-										<div className="col-xs-3" >
+										<div className="col-sm-3" >
 										</div>
-										<div className="col-xs-2" >
+										<div className="col-sm-2" >
 											<span>
 								<a target="_blank" href="http://twitter.com/expungeus">
 													<img src={ twitter }/>
 								        </a>
 											</span>
 										</div>
-										<div className="col-xs-2" >
+										<div className="col-sm-2" >
 											<span>
 								<a target="_blank" href="http://expungeus.org">
 													<img src={ site }/>
 								        </a>
 											</span>
 										</div>
-										<div className="col-xs-2" >
+										<div className="col-sm-2" >
 											<span>
 												<a href="mailto:jon@expungeus.org">
 													<img src={ mail }/>

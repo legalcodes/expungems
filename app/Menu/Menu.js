@@ -18,21 +18,28 @@ export default React.createClass({
 						<div>
 								<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={100} transitionLeaveTimeout={100}>
 
-								<div className="row">
-									<BoxButton first="EXPUNGE " third="HOW-TO" link="/howto" order="box1" firstLine="#9BA3AE" />
-									<BoxButton first="AM  I" third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
-									<BoxButton first="FAQ & " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
+								<div className="container-fluid">
+									<div className="row">
+										<BoxButton first="EXPUNGE " third="HOW-TO" link="/howto" order="box1" firstLine="#9BA3AE" />
+										<BoxButton first="AM  I" third="ELIGIBLE ?" link="/eligible" order="box2" firstLine="#9BA3AE" />
+										<BoxButton first="FAQ & " third="RESOURCES" link="/resources" order="box3" firstLine="#2A2A2A" />
+									</div>
 								</div>
-								<div className="row">
+
+								<div className="container-fluid">
+									<div className="row">
+										<InfoBox first="77 MILLION" second="AMERICANS HAVE" third="A CRIMINAL RECORD" link="/resources"
+											firstLine="#9BA3AE" secondLine="fff" thirdLine="#650000" />
+										<TextBox grid="col-lg-7" content={frontText} />
+									</div>
 								</div>
-								<div className="row">
-									<InfoBox first="77 MILLION" second="AMERICANS HAVE" third="A CRIMINAL RECORD" link="/resources"
-										firstLine="#9BA3AE" secondLine="fff" thirdLine="#650000" />
-									<TextBox grid="col-md-7" content={frontText} />
+
+								<div className="container-fluid">
+									<div className="row">
+										<FinePrint grid="col-lg-10" />
+									</div>
 								</div>
-								<div className="row">
-									<FinePrint grid="col-md-10" />
-								</div>
+								
 						</ReactCSSTransitionGroup>
 					</div>
 				)
