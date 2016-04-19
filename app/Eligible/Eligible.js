@@ -1,26 +1,31 @@
-import React from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import FinePrint from '../FinePrint/FinePrint'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import FinePrint from '../FinePrint/FinePrint';
+import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
+import Disclaimer from './Disclaimer';
 
-export default React.createClass({
-	render() {
-			return (
-					<div className="text-center">
-							<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={100} transitionLeaveTimeout={100}>
-							<h2 className="fromTop">
-									DISCLAIMER
-							</h2>
-							<div className="col-md-3">
-							</div>
-							<div className="col-md-6">
-								<p className="text-left">
-								This website is intended to help clarify expungement in Mississippi and does not serve as a substitute for legal advice. It is a good idea to speak to a lawyer if you still have questions about your record and are unsure of how to answer any of the questions in this app. Use of this website does not create an attorney-client relationship.
-								</p>
-							</div>
-							<div className="col-md-3">
-							</div>
-						</ReactCSSTransitionGroup>
-					</div>
-			)
-	}
-})
+/*
+const nodes= {
+		1: {
+				text: "So what are we going to do tonight Brain?"
+		},
+		2: {
+				text: "The same thing we do every night Pinky"
+		}
+};
+ */
+
+// Render routes for eligibility tree
+// render "Disclaimer" as the first node in Graph
+
+export default class Node extends React.Component {
+		render() {
+				return (
+								<div>
+									"Eligible Component"
+									{this.props.children}
+								</div>
+				)
+		}
+}

@@ -39,7 +39,6 @@ export default React.createClass({
 										<FinePrint grid="col-lg-10" />
 									</div>
 								</div>
-								
 						</ReactCSSTransitionGroup>
 					</div>
 				)
