@@ -7,7 +7,7 @@ export default React.createClass({
 					<div className="text-center">
 							<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={100} transitionLeaveTimeout={100}>
 							<h2 className="fromTop">
-								DISCLAIMER 
+								DISCLAIMER
 							</h2>
 							<div className="col-md-3">
 							</div>
