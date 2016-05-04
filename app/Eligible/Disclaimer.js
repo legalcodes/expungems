@@ -21,6 +21,6 @@ export default React.createClass({
 							</div>
 						</ReactCSSTransitionGroup>
 					</div>
-			)
+			);
 	}
 })

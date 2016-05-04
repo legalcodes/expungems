@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import graphNodes from '../directedGraph.js';
 
+/*
 const graphNodes= {
 	n1: {
 			text: "So what are we going to do tonight Brain?",
@@ -15,6 +18,7 @@ const graphNodes= {
 			options: [ ["3Back to start", "n1"], ["3Back to n2", "n2"] ]
 	},
  };
+*/
 
 export default class Nodes extends Component {
 
@@ -49,7 +53,7 @@ export default class Nodes extends Component {
 						console.log("1st Element : ", tuple[0], "2nd Element ", tuple[1] );
 						return (
 										<button onClick={ this.setNewNode.bind(this, tuple[1]) }
-							     	key={index} className="btn btn-default btn-lg" type="button"
+							     	key={index} className="btn btn-default btn-lg questionButton" type="button"
 										> { tuple[0] } </button>
 						);
 				}.bind(this));
@@ -57,9 +61,17 @@ export default class Nodes extends Component {
 
 		render () {
 				return (
-								<div>
-									<div> { this.state.text } </div>
-									<div> { (this.makeButtons.bind(this))() }  </div>
+								<div className="text-center">
+									<ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={300} transitionEnterTimeout={100} transitionLeaveTimeout={100}>
+										<div className="col-md-3">
+										</div>
+										<div className="col-md-6">
+											<div><span className="question"> { this.state.text } </span></div>
+											<div> { (this.makeButtons.bind(this))() }  </div>
+										</div>
+										<div className="col-md-3">
+										</div>
+									</ReactCSSTransitionGroup>
 								</div>
 				);
 		}
