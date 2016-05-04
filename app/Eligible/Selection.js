@@ -14,13 +14,14 @@ export default React.createClass({
 								<p className="list-group-item-text"></p>
 							</Link>
 							<Link to='nodes' className="list-group-item">
-								<h4 className="list-group-item-heading">DRUG COURT FELONY</h4>
-								<p className="list-group-item-text"></p>
+								<h4 className="list-group-item-heading">FELONY CONVICTIONS UNDER AGE 21</h4>
+						<p className="list-group-item-text"></p>
 							</Link>
 							<Link to='nodes' className="list-group-item">
-								<h4 className="list-group-item-heading">DRUG COURT FELONY</h4>
-								<p className="list-group-item-text"></p>
+								<h4 className="list-group-item-heading">FELONY CONVICTIONS</h4>
+						<p className="list-group-item-text">If eligible, apply at the court where you were convicted.</p>
 							</Link>
+
 						</div>
 					</ReactCSSTransitionGroup>
 				</div>

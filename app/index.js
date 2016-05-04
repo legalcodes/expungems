@@ -20,9 +20,9 @@ import Resources from './Resources';
 import Eligible from './Eligible/Eligible';
 import Disclaimer from './Eligible/Disclaimer';
 import Nodes from './Eligible/Nodes';
+import Selection from './Eligible/Selection';
+//QUESTION
 import Question from './Eligible/Question';
-// GRAPH FOR ROUTES
-//import MajorFunc from './directedGraph.js';
 
 const graphNodes= {
 		n1: {
@@ -58,7 +58,8 @@ ReactDOM.render((
 					<Route path="/howto" component={HowTo}/>
 					<Route path="/resources" component={Resources}/>
 					<Route path="/eligible" component={Eligible} >
-						<IndexRoute component={Nodes} />
+						<IndexRoute component={Selection} />
+						<Route path="/nodes" component={Nodes} />
 						{newRoutes}
 					</Route>
 				</Route>
