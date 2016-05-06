@@ -69,7 +69,7 @@ var graphNodes =  {
 		},
 		n7: {
 				text: "Based on your responses, this felony conviction is likely eligible for expungement!",
-				options: [ ["View Resources", "n"],]
+				options: [ ["View Resources", "n1"],]
 		},
 		n8: {
 				text: "",

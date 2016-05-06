@@ -10,7 +10,7 @@ import TextBox from './TextBox/TextBox';
 import FinePrint from './FinePrint/FinePrint';
 import Bars from './Bars/Bars';
 // GRAPH FOR ROUTES
-import MajorFunc from './directedGraph.js';
+//import MajorFunc from './directedGraph.js';
 // STYLESHEET
 require("./style.css");
 // NESTED VIEWS
@@ -24,19 +24,10 @@ import Selection from './Eligible/Selection';
 //QUESTION
 import Question from './Eligible/Question';
 
-const graphNodes= {
-		n1: {
-				text: "So what are we going to do tonight Brain?"
-		},
-		n2: {
-				text: "The same thing we do every night Pinky"
-		},
-		n3: "Hello"
-};
-
+ /*
 var newRoutes= Object.keys(graphNodes).map(function(value){
 		return <Route path={value} component={Question} key={value} ></Route>
-})
+}) */
 
 var Home = React.createClass({
 	render: function () {
@@ -59,8 +50,7 @@ ReactDOM.render((
 					<Route path="/resources" component={Resources}/>
 					<Route path="/eligible" component={Eligible} >
 						<IndexRoute component={Selection} />
-						<Route path="/nodes" component={Nodes} />
-						{newRoutes}
+						<Route path="/areas/:area" component={Nodes} />
 					</Route>
 				</Route>
 		</Router>

@@ -1,34 +1,42 @@
 import React, { Component } from 'react';
 import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import graphNodes from '../directedGraph.js';
+// GRAPHS
+import pretrialDiversionGraph from './Graphs/pretrialDiversion.js';
+import fcUnder21Graph from './Graphs/fcUnder21Graph.js';
+import fcGraph from './Graphs/fcGraph.js';
+import dcfcGraph from './Graphs/dcfcGraph.js';
+import foncGraph from './Graphs/foncGraph.js';
+/* import mc from './Graphs/mcGraph.js';
+import duiic from './Graphs/duiicGraph.js';
+import traffic from './Graphs/trafficGraph.js';
+import identity from './Graphs/identityGraph.js'; */
 
-/*
-const graphNodes= {
-	n1: {
-			text: "So what are we going to do tonight Brain?",
-			options: [ ["Continue", "n2"], ["Do not continue", "n3"] ]
-	},
-	n2: {
-			text: "The same thing we do every night Pinky...",
-			options: [ ["2Continue", "n3"], ["2Do not continue", "n1"] ]
-	},
-	n3: {
-			text: "We have reached the end",
-			options: [ ["3Back to start", "n1"], ["3Back to n2", "n2"] ]
-	},
- };
-*/
+// set graphNodes to be whatever is in params
+
+var selections = {
+		pretrialDiversion: pretrialDiversionGraph,
+		fcUnder21: fcUnder21Graph,
+		fc: fcGraph,
+		dcfc: dcfcGraph,
+		fonc: foncGraph,
+		/* mc: mcGraph,
+		duiic: duiicGraph,
+		traffic: trafficGraph,
+		identity: identityGraph */
+};
 
 export default class Nodes extends Component {
 
 		constructor(props) {
 				super(props);
-
-				this.state = {
-						activeNode: 'n1',
-						text: graphNodes['n1'].text,
-						options: graphNodes['n1'].options
+				console.log(typeof this.props.params.area);
+				var area = this.props.params.area;
+				this.state = new function() {
+						this.graphNodes = selections[area];
+						this.activeNode = 'n1';
+						this.text = this.graphNodes['n1'].text;
+						this.options = this.graphNodes['n1'].options;
 				};
 
 				this.makeButtons = this.makeButtons.bind(this);
@@ -36,21 +44,19 @@ export default class Nodes extends Component {
 		}
 
 		setNewNode (nodeStr) {
-				var newNode = graphNodes[nodeStr];
+				var newNode = this.state.graphNodes[nodeStr];
 				this.setState({
 						activeNode: nodeStr,
-						text: graphNodes[nodeStr].text,
-						options: graphNodes[nodeStr].options
+						text: this.state.graphNodes[nodeStr].text,
+						options: this.state.graphNodes[nodeStr].options
 				});
-				console.log('New state: ', this.state);
 		}
 
 		makeButtons (){
 				// find current options
 				var activeNode = this.state.activeNode;
-				var optionsArr = graphNodes[ activeNode ].options;
+				var optionsArr = this.state.graphNodes[ activeNode ].options;
 				return optionsArr.map(function(tuple, index){
-						console.log("1st Element : ", tuple[0], "2nd Element ", tuple[1] );
 						return (
 										<button onClick={ this.setNewNode.bind(this, tuple[1]) }
 							     	key={index} className="btn btn-default btn-lg questionButton" type="button"
