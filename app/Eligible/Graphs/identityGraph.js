@@ -18,36 +18,36 @@ var graphNodes =  {
 				options: [ ["Back to start", "n1"] ]
 		},
 		n5: {
-				text: "Were you convicted of a DUI OR were you convicted of being intoxicated under the age of 21?",
+				text: "Was your name or other identification used without your consent or authorization by another person?",
 				options: [ ["Yes", "n6"], ["No", "n4"] ]
 		},
 		n6: {
-				text: "Do you have any other DUI conviction or pending case?",
-				options: [ ["Yes", "n4"], ["No", "n7"] ]
+				text: "Did the use of your name or identification result in charges, an arrest record, or a conviction on the record of your name or other identification?",
+				options: [ ["Yes", "n3"], ["No", "n4"] ]
 		},
 		n7: {
-				text: "Were you the holder of a commercial driving license or commercial learning permit at the time?",
-				options: [ ["Yes", "n4"], ["No", "n8"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n8: {
-				text: "Have you completed all the terms and conditions of the sentence imposed by the conviction?",
-				options: [ ["Yes", "n9"], ["No", "n4"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n9: {
-				text: "Has it been more than 5 years since you completed all terms and conditions of your sentence?",
-				options: [ ["Yes", "n10"], ["No", "n4"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n10: {
-				text: "Did you refuse to submit to blood or breath testing?",
-				options: [ ["Yes", "n4"], ["No", "n11"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n11: {
-				text: "Was your BAC below .16%?",
-				options: [ ["Yes", "n4"], ["No", "n12"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n12: {
-				text: "Have you provided the court with justification for expunging this item?",
-				options: [ ["Yes", "n3"], ["No", "n4"] ]
+				text: "",
+				options: [ ["Yes", "n"], ["No", "n"] ]
 		},
 		n13: {
 				text: "",

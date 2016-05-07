@@ -9,9 +9,9 @@ import dcfcGraph from './Graphs/dcfcGraph.js';
 import foncGraph from './Graphs/foncGraph.js';
 import mcGraph from './Graphs/mcGraph.js';
 import mncGraph from './Graphs/mncGraph.js';
-/* import duiicGraph from './Graphs/duiicGraph.js';
+import duiicGraph from './Graphs/duiicGraph.js';
 import trafficGraph from './Graphs/trafficGraph.js';
-import identityGraph from './Graphs/identityGraph.js'; */
+import identityGraph from './Graphs/identityGraph.js'; 
 
 // set graphNodes to be whatever is in params
 
@@ -23,9 +23,9 @@ var selections = {
 		fonc: foncGraph,
 		mc: mcGraph,
 		mnc: mncGraph,
-		/* duiic: duiicGraph,
+		duiic: duiicGraph,
 		traffic: trafficGraph,
-		identity: identityGraph */
+		identity: identityGraph
 };
 
 export default class Nodes extends Component {
