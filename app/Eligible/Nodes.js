@@ -7,10 +7,11 @@ import fcUnder21Graph from './Graphs/fcUnder21Graph.js';
 import fcGraph from './Graphs/fcGraph.js';
 import dcfcGraph from './Graphs/dcfcGraph.js';
 import foncGraph from './Graphs/foncGraph.js';
-/* import mc from './Graphs/mcGraph.js';
-import duiic from './Graphs/duiicGraph.js';
-import traffic from './Graphs/trafficGraph.js';
-import identity from './Graphs/identityGraph.js'; */
+import mcGraph from './Graphs/mcGraph.js';
+import mncGraph from './Graphs/mncGraph.js';
+/* import duiicGraph from './Graphs/duiicGraph.js';
+import trafficGraph from './Graphs/trafficGraph.js';
+import identityGraph from './Graphs/identityGraph.js'; */
 
 // set graphNodes to be whatever is in params
 
@@ -20,8 +21,9 @@ var selections = {
 		fc: fcGraph,
 		dcfc: dcfcGraph,
 		fonc: foncGraph,
-		/* mc: mcGraph,
-		duiic: duiicGraph,
+		mc: mcGraph,
+		mnc: mncGraph,
+		/* duiic: duiicGraph,
 		traffic: trafficGraph,
 		identity: identityGraph */
 };
@@ -30,7 +32,6 @@ export default class Nodes extends Component {
 
 		constructor(props) {
 				super(props);
-				console.log(typeof this.props.params.area);
 				var area = this.props.params.area;
 				this.state = new function() {
 						this.graphNodes = selections[area];
