@@ -26,6 +26,6 @@ export default class Node extends React.Component {
 									"Eligible Component"
 									{this.props.children}
 								</div>
-				)
+				);
 		}
 }

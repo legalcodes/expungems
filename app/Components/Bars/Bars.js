@@ -4,9 +4,9 @@ import { Router, Route, hashHistory, Link } from 'react-router';
 
 require("./bars.css");
 
-var mail = require("../Assets/web.png");
-var twitter = require("../Assets/social.png");
-var site = require("../Assets/screen.png");
+var mail = require("../../Assets/web.png");
+var twitter = require("../../Assets/social.png");
+var site = require("../../Assets/screen.png");
 
 export default React.createClass({
 		render() {

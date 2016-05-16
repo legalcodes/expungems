@@ -4,25 +4,25 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, Link, IndexRoute } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // UI COMPONENTS
-import BoxButton from './BoxButton/BoxButton';
-import InfoBox from './InfoBox/InfoBox';
-import TextBox from './TextBox/TextBox';
-import FinePrint from './FinePrint/FinePrint';
-import Bars from './Bars/Bars';
+import BoxButton from './Components/BoxButton/BoxButton';
+import InfoBox from './Components/InfoBox/InfoBox';
+import TextBox from './Components/TextBox/TextBox';
+import FinePrint from './Components/FinePrint/FinePrint';
+import Bars from './Components/Bars/Bars';
 // GRAPH FOR ROUTES
 //import MajorFunc from './directedGraph.js';
 // STYLESHEET
 require("./style.css");
 // NESTED VIEWS
-import Menu from './Menu/Menu';
-import HowTo from './HowTo/HowTo';
-import Resources from './Resources';
-import Eligible from './Eligible/Eligible';
-import Disclaimer from './Eligible/Disclaimer';
-import Nodes from './Eligible/Nodes';
-import Selection from './Eligible/Selection';
+import Menu from './Components/Menu/Menu';
+import HowTo from './Components/HowTo/HowTo';
+import Resources from './Components/Events/Resources';
+import Eligible from './Components/Eligible/Eligible';
+import Disclaimer from './Components/Eligible/Disclaimer';
+import Nodes from './Components/Eligible/Nodes';
+import Selection from './Components/Eligible/Selection';
 //QUESTION
-import Question from './Eligible/Question';
+import Question from './Components/Eligible/Question';
 
  /*
 var newRoutes= Object.keys(graphNodes).map(function(value){
