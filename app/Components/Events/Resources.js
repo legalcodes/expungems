@@ -1,5 +1,5 @@
 import React from 'react';
-
+import EventList from '../../Containers/EventList';
 
 // create Event component
 // create Events component ( that displays all events )
@@ -7,6 +7,10 @@ import React from 'react';
 
 export default React.createClass({
 		render() {
-				return <div>Resources</div>
+				return (
+								<div>
+										<EventList />
+								</div>
+				);
 		}
-})
+});
