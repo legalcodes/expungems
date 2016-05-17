@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Event from '../Components/Events/Event';
 
 class EventList extends Component {
 		renderList() {
 				return this.props.events.map((event) => {
 						return (
-										<li key={event.date} className="list-group-item">
-												{event.title}
-										</li>
+										<Event key={event.date} which={event} />
 						);
 				});
 		}
 
 		render () {
 				return (
-								<ul className="list-group col-sm-4">
+								<ul className="list-group col-sm-4 ">
 										{this.renderList()}
 								</ul>
 				);

@@ -1,0 +1,8 @@
+li {
+		color: black;
+}
+
+.centerBlock {
+                display: table;
+                margin: 0 auto;
+            }

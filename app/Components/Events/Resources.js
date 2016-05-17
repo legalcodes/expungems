@@ -9,7 +9,9 @@ export default React.createClass({
 		render() {
 				return (
 								<div>
-										<EventList />
+								<div className="centerBlock">
+														<EventList />
+										</div>
 								</div>
 				);
 		}

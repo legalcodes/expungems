@@ -13,6 +13,6 @@ export default React.createClass({
 								<div className="thirdLine" style={{ color: this.props.thirdLine }}>{this.props.third}</div>
 								    </div>
 								</div>
-				)
+				);
 		}
 })
