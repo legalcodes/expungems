@@ -40,7 +40,7 @@
     font-size: 14px;
     padding: 0;
     margin: 0;
-    line-height:32px
+    line-height:22px
 }
 
 .event-misc-text {
@@ -48,5 +48,9 @@
     font-size: 14px;
     padding: 0;
     margin: 0;
-    line-height:32px
+    line-height:22px
+}
+
+.event-container {
+    margin-top: 2%;
 }
