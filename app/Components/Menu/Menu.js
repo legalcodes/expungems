@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, Link } from 'react-router';
 
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BoxButton from '../BoxButton/BoxButton';
 import InfoBox from '../InfoBox/InfoBox';
 import TextBox from '../TextBox/TextBox';
-import FinePrint from '../FinePrint/FinePrint'
+import FinePrint from '../FinePrint/FinePrint';
 
 require("./menu.css");
 
@@ -41,6 +41,6 @@ export default React.createClass({
 								</div>
 						</ReactCSSTransitionGroup>
 					</div>
-				)
+				);
 		}
 })

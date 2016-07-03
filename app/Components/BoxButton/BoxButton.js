@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, Link } from 'react-router'
+import { Router, Route, hashHistory, Link } from 'react-router';
 require("./boxButton.css");
 
 export default React.createClass({
@@ -18,6 +18,6 @@ export default React.createClass({
 							</Link>
 						</h2>
 					</div>
-				)
+				);
 		}
 })

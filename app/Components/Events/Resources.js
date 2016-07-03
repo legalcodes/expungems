@@ -8,11 +8,7 @@ import EventList from '../../Containers/EventList';
 export default React.createClass({
 		render() {
 				return (
-								<div>
-								<div className="centerBlock">
-														<EventList />
-										</div>
-								</div>
+            <EventList />
 				);
 		}
 });

@@ -13,7 +13,7 @@ class EventList extends Component {
 
 		render () {
 				return (
-								<ul className="list-group col-sm-4 ">
+								<ul className="list-group col-lg-12">
 										{this.renderList()}
 								</ul>
 				);
