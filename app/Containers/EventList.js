@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Event from '../Components/Events/Event';
+import '../Components/Events/eventList.css';
+import {selectEvent } from '../Actions/index.js';
+import { bindActionCreators } from 'redux';
 
 class EventList extends Component {
 		renderList() {
@@ -26,17 +29,15 @@ function mapStateToProps(state){
 		};
 };
 
-export default connect(mapStateToProps)(EventList);
+// Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.selectEvent()
+function mapDispatchToProps(dispatch){
+    // Pass result of selectBook() to all of our reducers
+    return bindActionCreators({ selectEvent: selectEvent }, dispatch);
+}
 
-
-
-
-
-
-
-
-
-
+// Promote EventList from component to Container - it also needs to know about selectBook dispatch method.
+// selectBook is now available as props
+export default connect(mapStateToProps, mapDispatchToProps)(EventList);
 
 
 
