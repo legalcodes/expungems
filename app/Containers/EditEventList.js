@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Event from '../Components/Events/Event';
 import {selectEvent } from '../Actions/index.js';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 // import '../Components/Events/events.css';
 
 class EventList extends Component {
 		renderList() {
 				return this.props.events.map((event) => {
 						return (
-										<Event key={event.date} which={event} />
+										<Event key={event.date} e={event} />
 						);
 				});
 		}

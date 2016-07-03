@@ -7,7 +7,7 @@ class EventList extends Component {
 		renderList() {
 				return this.props.events.map((event) => {
 						return (
-										<Event key={event.date} which={event} />
+										<Event key={event.date} e={event} />
 						);
 				});
 		}
@@ -26,16 +26,7 @@ function mapStateToProps(state){
 				events: state.events
 		};
 };
-
-// Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.selectEvent()
-function mapDispatchToProps(dispatch){
-    // Pass result of selectBook() to all of our reducers
-    return bindActionCreators({ selectEvent: selectEvent }, dispatch);
-}
-
-// Promote EventList from component to Container - it also needs to know about selectBook dispatch method.
-// selectBook is now available as props
-export default connect(mapStateToProps, mapDispatchToProps)(EventList);
+export default connect(mapStateToProps)(EventList);
 
 
 
