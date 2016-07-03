@@ -1,0 +1,52 @@
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.event-date {
+    background: #9ba3ae;
+}
+
+.event-date-text {
+    font-size: 22px;
+    margin-left: 3%;
+    color: black;
+    padding: 2px;
+}
+
+.event-time {
+    background-color: #333;
+}
+
+.event-title {
+    background: #fff;
+}
+
+.event-title-text {
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.event-address-text {
+    color: black;
+    font-size: 14px;
+}
+
+.event-admission-text {
+    color: grey;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    line-height:32px
+}
+
+.event-misc-text {
+    color: grey;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    line-height:32px
+}
