@@ -25,6 +25,7 @@ require("./style.css");
 import Menu from './Components/Menu/Menu';
 import HowTo from './Components/HowTo/HowTo';
 import Resources from './Components/Events/Resources';
+import EditEvents from './Components/EditEvents/EditEvents';
 import Eligible from './Components/Eligible/Eligible';
 import Disclaimer from './Components/Eligible/Disclaimer';
 import Nodes from './Components/Eligible/Nodes';
@@ -60,6 +61,7 @@ ReactDOM.render((
 								<IndexRoute component={Menu}/>
 								<Route path="/howto" component={HowTo}/>
 								<Route path="/resources" component={Resources}/>
+                <Route path="/editevents" component={EditEvents}/>
 								<Route path="/eligible" component={Eligible} >
 										<IndexRoute component={Selection} />
 										<Route path="/areas/:area" component={Nodes} />
