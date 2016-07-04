@@ -6,21 +6,21 @@ import { selectEvent } from '../Actions/index.js';
 import '../Components/Events/events.css';
 
 class EventList extends Component {
-		renderList() {
-				return this.props.events.map((event) => {
-						return (
-										<EditEvent key={event.date} e={event} hello={selectEvent} />
-						);
-				});
-		}
+  renderList() {
+    return this.props.events.map((event) => {
+      return (
+        <EditEvent key={event.date} e={event} selectEvent={selectEvent} />
+      );
+    });
+  }
 
-		render () {
-				return (
-								<ul className="list-group col-lg-12">
-										{this.renderList()}
-								</ul>
-				);
-		}
+  render() {
+    return (
+      <ul className="list-group col-lg-12">
+        {this.renderList()}
+      </ul>
+    );
+  }
 }
 
 function mapStateToProps(state){
