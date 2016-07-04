@@ -9,7 +9,7 @@ class EventList extends Component {
 		renderList() {
 				return this.props.events.map((event) => {
 						return (
-										<EditEvent key={event.date} e={event} />
+										<EditEvent key={event.date} e={event} hello={selectEvent} />
 						);
 				});
 		}

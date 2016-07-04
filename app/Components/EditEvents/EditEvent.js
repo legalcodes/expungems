@@ -7,7 +7,7 @@ export default React.createClass({
 				return (
             <div>
                 <div className="row event-date row-eq-height"
-                    onClick={() => selectEvent(this.props.e)}
+                    onClick={() => this.props.hello(this.props.e)}
                 >
                     <h4 className="event-date-text">{this.props.e.date}</h4>
                 </div>
