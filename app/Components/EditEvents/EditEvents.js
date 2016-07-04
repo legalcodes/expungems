@@ -1,5 +1,5 @@
 import React from 'react';
-import EventList from '../../Containers/EventList';
+import EditEventList from '../../Containers/EditEventList';
 import '../Events/events.css';
 
 // create Event component
@@ -11,7 +11,7 @@ export default React.createClass({
                 <div className="container-fluid event-container">
                     <div className="row">
                     <div className="col-md-1"></div>
-                    <div className="col-md-10"><EventList /></div>
+                    <div className="col-md-10"><EditEventList /></div>
                     <div className="col-md-1"></div>
                 </div>
                 </div>
