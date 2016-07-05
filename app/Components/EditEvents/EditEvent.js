@@ -5,19 +5,26 @@ import {selectEvent} from '../../Actions/index.js';
 
 export default React.createClass({
   render() {
+      console.log('Current event: ', this.props.e.title, this.props.e.date );
     return (
         <div>
             <div className="container">
 
-            <button type="button" className="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Edit &nbsp;  {this.props.e.title}</button>
+            <button type="button"
+                className="btn btn-info btn-lg"
+                data-toggle="modal"
+                data-target={'#' + this.props.e.id}>
 
-                <div className="modal fade" id="myModal" role="dialog">
+                Edit &nbsp;  {this.props.e.title}
+            </button>
+
+            <div className="modal fade" id={this.props.e.id} role="dialog">
                 <div className="modal-dialog modal-lg">
 
                     <div className="modal-content">
                     <div className="modal-header">
                         <button type="button" className="close" data-dismiss="modal">&times;</button>
-                        <h2 className="modal-title">Modal Header</h2>
+                        <h2 className="modal-title">{this.props.e.title}</h2>
                     </div>
                     <div className="modal-body">
                         <div><h4>Current date : </h4>{this.props.e.date}</div>
