@@ -3,6 +3,7 @@ import '../Events/events.css';
 import './editEvents.css';
 import {selectEvent} from '../../Actions/index.js';
 
+
 export default React.createClass({
   render() {
       console.log('Current event: ', this.props.e.title, this.props.e.date );
