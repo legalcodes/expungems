@@ -1,6 +1,5 @@
 import React from 'react';
 import EditEventList from '../../Containers/EditEventList';
-import '../Events/events.css';
 
 // create Event component
 // create Events component ( that displays all events )
