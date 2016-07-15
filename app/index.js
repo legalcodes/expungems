@@ -1,3 +1,13 @@
+// OTHER DEPENDENCIES
+import $ from 'jquery';
+import jQuery from 'jquery';
+
+window.$ = $;
+window.jQuery = jQuery;
+
+// import Bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+
 // REACT AND REACT ROUTER
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -34,10 +44,14 @@ import Selection from './Components/Eligible/Selection';
 //QUESTION
 import Question from './Components/Eligible/Question';
 
+
+
  /*
 var newRoutes= Object.keys(graphNodes).map(function(value){
 		return <Route path={value} component={Question} key={value} ></Route>
 }) */
+
+
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
