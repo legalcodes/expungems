@@ -23,7 +23,7 @@ exports.findEventId = function(id, cb) {
   });
 };
 
-// returns created user object
+// returns created event object
 
 exports.insertEvent = function(data, cb) {
   var sql = `
