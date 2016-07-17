@@ -1,7 +1,12 @@
-var express = require('express');
-var path = require('path');
-var env = require('node-env-file');
-require('./webpack.config.js');
+import express from 'express';
+import path from 'path';
+import env from 'env';
+import './webpack.config.js';
+
+// var express = require('express');
+// var path = require('path');
+// var env = require('node-env-file');
+// require('./webpack.config.js');
 
 var app = express();
 
