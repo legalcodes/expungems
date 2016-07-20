@@ -1,33 +1,11 @@
-import pg from 'pg';
+var pg = require('pg');
 
-var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/expungems-events';
+var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/expungems';
 
-function query (sql, params, cb) {
-  pg.connect(DATABASE_URL, function(err, client, done){
-    if (err) {
-      done(); // release client back to pool
-      cb(err);
-      return;
-    }
-    client.query(sql, params, cb);
-  });
-}
+var client = new pg.Client(connectionString);
 
-// returns event object if found, else returns undefined
-exports.findEventId = function(id, cb) {
-  var sql = `SELECT * FROM events WHERE id = $1`;
+client.connect();
 
-  query(sql, [id], function(err, result) {
-    if(err) return cb(err);
-    cb(null, result.rows[0]);
-  });
-};
+var query = client.query('CREATE TABLE events(id SERIAL PRIMARY KEY, title VARCHAR(40) not null, description VARCHAR(40) not null)');
 
-// returns created event object
-
-exports.insertEvent = function(data, cb) {
-  var sql = `
-    INSERT INTO events (eventname, description)
-    VALUES ($1, $2)
-    RETURNING * `; // tells postgres to return the created user record to us
-};
+query.on('end', function() { client.end(); });
