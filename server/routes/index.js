@@ -81,8 +81,6 @@ router.put('/api/v1/expungems/:event_id', function(req, res) {
 	// Grab data from http request
 	var data = {title: req.body.title, description: req.body.description};
 
-	console.log('DATA GRABBED FROM HTTP REQ: ////////////////// ', data);
-
 	// Get a Postgres client from connection pool
 	pg.connect(connectionString, function(err, client, done) {
 		if(err) {return handleError(err, done, res);}
@@ -105,5 +103,38 @@ router.put('/api/v1/expungems/:event_id', function(req, res) {
 		});
 	});
 });
+
+// DESTROY
+
+router.delete('/api/v1/expungems/:event_id', function(req, res) {
+
+	var results = [];
+
+	// Grab data from URL params
+	var id = req.params.todo_id;
+
+	// Get Postgres client from connection pool
+	pg.connect(connectionString, function(err, client, done) {
+		if(err) {return handleError(err, done, res);}
+
+		// SQL Query > Delete Data
+		client.query("DELETE FROM events WHERE id=($1)", [id]);
+
+		// SQL Query > Select Data
+		var query = client.query("SELECT * FROM events ORDER BY id ASC");
+
+		// Stream results back one row at a time
+		query.on('row', function(row) {
+			results.push(row);
+		});
+
+		// After all data is returned, close connection and return results
+		query.on('end', function() {
+			done();
+			return res.json(results);
+		});
+	})
+});
+
 
 module.exports = router;
