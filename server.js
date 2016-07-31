@@ -7,8 +7,6 @@ var pg = require('pg');
 var routes = require('./server/routes/index');
 require('./webpack.config.js');
 
-console.log('Routes: ', routes);
-
 var app = express();
 
 var port = process.env.PORT;

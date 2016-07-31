@@ -2,9 +2,6 @@
 import $ from 'jquery';
 import jQuery from 'jquery';
 
-window.$ = $;
-window.jQuery = jQuery;
-
 // import Bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 

@@ -24,6 +24,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.0.1",
     "redux": "^3.5.2",
+    "redux-promise": "^0.5.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
