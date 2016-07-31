@@ -13,8 +13,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // REDUX
 import { Provider } from 'react-redux';
+import ReduxPromise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './Reducers';
+
+
 
 // UI COMPONENTS
 import BoxButton from './Components/BoxButton/BoxButton';
@@ -50,7 +53,7 @@ var newRoutes= Object.keys(graphNodes).map(function(value){
 
 
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 var Home = React.createClass({
 	render: function () {

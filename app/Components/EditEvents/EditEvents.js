@@ -1,8 +1,7 @@
 import React from 'react';
 import EditEventList from '../../Containers/EditEventList';
 
-// create Event component
-// create Events component ( that displays all events )
+// wraps event list container in a Bootstrap grid
 
 export default React.createClass({
 		render() {

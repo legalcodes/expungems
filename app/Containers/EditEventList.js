@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 import { selectEvent } from '../Actions/index.js';
 import '../Components/Events/events.css';
 
+// container that generates a view for each event
+
 class EventList extends Component {
   renderList() {
     return this.props.events.map((event) => {

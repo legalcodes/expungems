@@ -2,62 +2,63 @@ import React from 'react';
 import '../Events/events.css';
 import './editEvents.css';
 import {selectEvent} from '../../Actions/index.js';
+import { Button, Modal, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
+// exports a button and modal when button is clicked
 
 export default React.createClass({
+getInitialState() {
+    return { showModal: false };
+  },
+
+  close() {
+    this.setState({ showModal: false });
+  },
+
+  open() {
+    this.setState({ showModal: true });
+  },
+
   render() {
-      console.log('Current event: ', this.props.e.title, this.props.e.date );
+    const popover = (
+      <Popover id="modal-popover" title="popover">
+        very popover. such engagement
+      </Popover>
+    );
+    const tooltip = (
+      <Tooltip id="modal-tooltip">
+        wow.
+      </Tooltip>
+    );
+
     return (
-        <div>
-            <div className="container">
+      <div>
+        <p></p>
 
-            <button type="button"
-                className="btn btn-info btn-lg"
-                data-toggle="modal"
-                data-target={'#' + this.props.e.id}>
+        <Button
+          bsStyle="primary"
+          bsSize="large"
+          onClick={this.open}
+        >
+        Edit &nbsp; {this.props.e.title}
+        </Button>
 
-                Edit &nbsp;  {this.props.e.title}
-            </button>
-
-            <div className="modal fade" id={this.props.e.id} role="dialog">
-                <div className="modal-dialog modal-lg">
-
-                    <div className="modal-content">
-                    <div className="modal-header">
-                        <button type="button" className="close" data-dismiss="modal">&times;</button>
-                        <h2 className="modal-title">{this.props.e.title}</h2>
-                    </div>
-                    <div className="modal-body">
-                        <div><h4>Current date : </h4>{this.props.e.date}</div>
-                        <div><h4>Current title :</h4>{this.props.e.title}</div>
-                        <div><h4>Current address : </h4>{this.props.e.address}</div>
-                        <div><h4>Current admission info :</h4>{this.props.e.admission}</div>
-                        <div><h4>Current miscellaneous info :</h4>{this.props.e.misc}</div>
-                    </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                    </div>
-
-                </div>
-                </div>
-
-            </div>
-            <div className="row event-date row-eq-height">
-                <h4 className="event-date-text">{this.props.e.date}</h4>
-            </div>
-            <div className="row row-eq-height">
-                <div className="col-md-2 event-time">
-                    <h4> {this.props.e.time}</h4>
-                </div>
-                <div className="col-md-10 event-title">
-                    <h4 className="event-title-text"><b>{this.props.e.title}</b></h4>
-                    <p className="event-address-text">{this.props.e.address}</p>
-                    <p className="event-admission-text">{this.props.e.admission}</p>
-                    <p className="event-misc-text">{this.props.e.misc}</p>
-                </div>
-            </div>
-        </div>
+        <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+						<div><h4>Current date : </h4>{this.props.e.date}</div>
+						<div><h4>Current title :</h4>{this.props.e.title}</div>
+						<div><h4>Current address : </h4>{this.props.e.address}</div>
+						<div><h4>Current admission info :</h4>{this.props.e.admission}</div>
+						<div><h4>Current miscellaneous info :</h4>{this.props.e.misc}</div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.close}>Close</Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
     );
   }
 });
