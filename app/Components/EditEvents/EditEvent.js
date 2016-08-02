@@ -56,11 +56,8 @@ getInitialState() {
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-						<EventForm  />
+						<EventForm e={this.props.e} />
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
-          </Modal.Footer>
         </Modal>
       </div>
     );

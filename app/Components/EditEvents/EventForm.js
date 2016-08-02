@@ -29,63 +29,127 @@ function FieldGroup({ id, label, help }) {
   );
 }
 
-function formInstance () {
-	return (
-		<Form horizontal>
-			<FormGroup controlId="formHorizontalEmail">
+class EventForm extends React.Component {
+	constructor(props) {
+    super(props);
+  }
+
+	render() {
+		return (
+				<Form horizontal>
+				<FormGroup controlId="formHorizontalEmail">
+						<Col componentClass={ControlLabel} sm={2}>
+								Date
+						</Col>
+						<Col sm={10}>
+								<FormControl type="eventdate" placeholder={this.props.e.date} />
+						</Col>
+				</FormGroup>
+
+				<FormGroup controlId="formHorizontalEmail">
+						<Col componentClass={ControlLabel} sm={2}>
+								Title
+						</Col>
+						<Col sm={10}>
+								<FormControl type="title" placeholder={this.props.e.title} />
+						</Col>
+				</FormGroup>
+
+				<FormGroup controlId="formHorizontalEmail">
+						<Col componentClass={ControlLabel} sm={2}>
+								Address
+						</Col>
+						<Col sm={10}>
+								<FormControl type="address" placeholder={this.props.e.address} />
+						</Col>
+				</FormGroup>
+
+		​
+				<FormGroup controlId="formControlsTextarea">
 				<Col componentClass={ControlLabel} sm={2}>
-						Date
+						Admission Info
 				</Col>
 				<Col sm={10}>
-						<FormControl type="date" placeholder="Email" />
+						<FormControl componentClass="textarea" placeholder={this.props.e.admission} />
 				</Col>
-			</FormGroup>
-
-			<FormGroup controlId="formHorizontalEmail">
-				<Col componentClass={ControlLabel} sm={2}>
-						Title
-				</Col>
-				<Col sm={10}>
-						<FormControl type="title" placeholder="Email" />
-				</Col>
-			</FormGroup>
-
-			<FormGroup controlId="formHorizontalEmail">
-				<Col componentClass={ControlLabel} sm={2}>
-						Address
-				</Col>
-				<Col sm={10}>
-						<FormControl type="address" placeholder="Email" />
-				</Col>
-			</FormGroup>
-
-​
-    <FormGroup controlId="formControlsTextarea">
-			<Col componentClass={ControlLabel} sm={2}>
-				Admission Info
-			</Col>
-			<Col sm={10}>
-				<FormControl componentClass="textarea" placeholder="Email" />
-			</Col>
-    </FormGroup>
+				</FormGroup>
 
 
-			<FormGroup controlId="formControlsTextarea">
-				<Col componentClass={ControlLabel} sm={2}>
-						Misc Info
-				</Col>
-				<Col sm={10}>
-						<FormControl componentClass="textarea" placeholder="Email" />
-				</Col>
-			</FormGroup>
-
-
-​
-    <Button type="submit">
-      Submit
-    </Button>
-  </Form>
-	);
+				<FormGroup controlId="formControlsTextarea">
+						<Col componentClass={ControlLabel} sm={2}>
+								Misc Info
+						</Col>
+						<Col sm={10}>
+								<FormControl componentClass="textarea" placeholder={this.props.e.misc} />
+						</Col>
+				</FormGroup>
+		​
+				<Button type="submit">
+				Submit
+				</Button>
+		</Form>
+		)
+		}
 }
 
-export default formInstance;
+
+// function formInstance () {
+// 	return (
+// 		<Form horizontal>
+// 			<FormGroup controlId="formHorizontalEmail">
+// 				<Col componentClass={ControlLabel} sm={2}>
+// 						Date
+// 				</Col>
+// 				<Col sm={10}>
+// 						<FormControl type="date" placeholder={this.props.e.date} />
+// 				</Col>
+// 			</FormGroup>
+
+// 			<FormGroup controlId="formHorizontalEmail">
+// 				<Col componentClass={ControlLabel} sm={2}>
+// 						Title
+// 				</Col>
+// 				<Col sm={10}>
+
+// 				</Col>
+// 			</FormGroup>
+
+// 			<FormGroup controlId="formHorizontalEmail">
+// 				<Col componentClass={ControlLabel} sm={2}>
+// 						Address
+// 				</Col>
+// 				<Col sm={10}>
+// 						<FormControl type="address" placeholder="Email" />
+// 				</Col>
+// 			</FormGroup>
+
+// ​
+//     <FormGroup controlId="formControlsTextarea">
+// 			<Col componentClass={ControlLabel} sm={2}>
+// 				Admission Info
+// 			</Col>
+// 			<Col sm={10}>
+// 				<FormControl componentClass="textarea" placeholder="Email" />
+// 			</Col>
+//     </FormGroup>
+
+
+// 			<FormGroup controlId="formControlsTextarea">
+// 				<Col componentClass={ControlLabel} sm={2}>
+// 						Misc Info
+// 				</Col>
+// 				<Col sm={10}>
+// 						<FormControl componentClass="textarea" placeholder="Email" />
+// 				</Col>
+// 			</FormGroup>
+
+
+// ​
+//     <Button type="submit">
+//       Submit
+//     </Button>
+//   </Form>
+// 	);
+// }
+
+export default EventForm;
