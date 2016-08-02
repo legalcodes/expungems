@@ -4,14 +4,19 @@ import EditEvent from '../Components/EditEvents/EditEvent';
 import { bindActionCreators } from 'redux';
 import { selectEvent } from '../Actions/index.js';
 import '../Components/Events/events.css';
+import Event from '../Components/Events/Event';
 
 // container that generates a view for each event
 
 class EventList extends Component {
   renderList() {
     return this.props.events.map((event) => {
+			console.log(event);
       return (
-        <EditEvent key={event.date} e={event} selectEvent={selectEvent} />
+				<div>
+						<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
+						<Event key={event.date} e={event} />
+				</div>
       );
     });
   }

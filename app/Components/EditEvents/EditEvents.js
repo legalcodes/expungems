@@ -13,7 +13,6 @@ export default React.createClass({
                     <div className="col-md-1"></div>
                 </div>
                 </div>
-
 				);
 		}
 });

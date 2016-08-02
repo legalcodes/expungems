@@ -4,7 +4,9 @@ import './editEvents.css';
 import {selectEvent} from '../../Actions/index.js';
 import { Button, Modal, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
-// exports a button and modal when button is clicked
+// exports a button and modal for mapping to each event
+
+// return event views underneath the buttons
 
 export default React.createClass({
 getInitialState() {
@@ -48,11 +50,11 @@ getInitialState() {
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-						<div><h4>Current date : </h4>{this.props.e.date}</div>
-						<div><h4>Current title :</h4>{this.props.e.title}</div>
-						<div><h4>Current address : </h4>{this.props.e.address}</div>
-						<div><h4>Current admission info :</h4>{this.props.e.admission}</div>
-						<div><h4>Current miscellaneous info :</h4>{this.props.e.misc}</div>
+						<div><h4>Edit date : </h4>{this.props.e.date}</div>
+						<div><h4>Edit title :</h4>{this.props.e.title}</div>
+						<div><h4>Edit address : </h4>{this.props.e.address}</div>
+						<div><h4>Edit admission info :</h4>{this.props.e.admission}</div>
+						<div><h4>Edit miscellaneous info :</h4>{this.props.e.misc}</div>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>
