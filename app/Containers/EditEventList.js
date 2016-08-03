@@ -6,7 +6,7 @@ import { selectEvent } from '../Actions/index.js';
 import '../Components/Events/events.css';
 import Event from '../Components/Events/Event';
 
-// container that generates a view (button, modal + event view) for each event
+// container that generates a view for each event
 
 class EventList extends Component {
   renderList() {
