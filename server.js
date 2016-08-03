@@ -36,6 +36,11 @@ var client = new pg.Client(connectionString);
 
 client.connect();
 
-var query = client.query('CREATE TABLE events(id SERIAL PRIMARY KEY, title VARCHAR(40) not null, date VARCHAR(40) not null, time VARCHAR(40) not null, address VARCHAR(40) not null, admission VARCHAR(40) not null, misc VARCHAR(40) not null)');
+// run only if table does not already exist
 
-query.on('end', function() { client.end(); });
+// check if table exists
+
+
+// var query = client.query('CREATE TABLE events(id SERIAL PRIMARY KEY, title VARCHAR(40) not null, date VARCHAR(40) not null, time VARCHAR(40) not null, address VARCHAR(40) not null, admission VARCHAR(40) not null, misc VARCHAR(40) not null)');
+
+// query.on('end', function() { client.end(); });
