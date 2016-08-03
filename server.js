@@ -13,6 +13,8 @@ var port = process.env.PORT;
 
 var static_path = path.join(__dirname, 'dist');
 
+var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/expungems';
+
 app.use(bodyParser());
 
 app.use(express.static(static_path))
@@ -29,3 +31,11 @@ app.use(express.static(static_path))
   });
 
 app.use(routes);
+
+var client = new pg.Client(connectionString);
+
+client.connect();
+
+var query = client.query('CREATE TABLE events(id SERIAL PRIMARY KEY, title VARCHAR(40) not null, date VARCHAR(40) not null, time VARCHAR(40) not null, address VARCHAR(40) not null, admission VARCHAR(40) not null, misc VARCHAR(40) not null)');
+
+query.on('end', function() { client.end(); });
