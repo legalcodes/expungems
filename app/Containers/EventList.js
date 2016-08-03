@@ -6,9 +6,8 @@ import Event from '../Components/Events/Event';
 class EventList extends Component {
 		renderList() {
 				return this.props.events.map((event) => {
-					console.log(event);
 						return (
-										<Event key={event.date} e={event} />
+										<Event key={event.id + 'eventList'} e={event} />
 						);
 				});
 		}

@@ -10,9 +10,7 @@ import { Button,
 				 OverlayTrigger
 			 } from 'react-bootstrap';
 
-// exports a button and modal for mapping to each event
-
-// return event views underneath the buttons
+// for each event, exports a button (with modal)
 
 export default React.createClass({
 getInitialState() {
@@ -53,7 +51,7 @@ getInitialState() {
 
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Edit &nbsp; {this.props.e.title} &nbsp; Event</Modal.Title>
           </Modal.Header>
           <Modal.Body>
 						<EventForm e={this.props.e} />
