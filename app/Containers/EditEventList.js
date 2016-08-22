@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import EditEvent from '../Components/EditEvents/EditEvent';
 import { bindActionCreators } from 'redux';
-import { selectEvent } from '../Actions/index.js';
+import { selectEvent, fetchEvents } from '../Actions/index.js';
+import EditEvent from '../Components/EditEvents/EditEvent';
+
 import '../Components/Events/events.css';
 import Event from '../Components/Events/Event';
 
 // container that generates a view for each event
 
 class EventList extends Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  componentDidMount() {
+    this.props.fetchEvents();
+  }
+
   renderList() {
-    return this.props.events.map((event) => {
-      return (
-				<div key={event.id}>
-						<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
-						<Event key={event.id + 'bareEvent'} e={event} />
-				</div>
-      );
-    });
+    // return this.props.events.map((event) => {
+    //   return (
+		// 		<div key={event.id}>
+		// 				<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
+		// 				<Event key={event.id + 'bareEvent'} e={event} />
+		// 		</div>
+    //   );
+    // });
   }
 
   render() {
@@ -38,7 +48,9 @@ function mapStateToProps(state){
 // Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.selectEvent()
 function mapDispatchToProps(dispatch){
     // Pass result of selectBook() to all of our reducers
-    return bindActionCreators({ selectEvent: selectEvent }, dispatch);
+  return bindActionCreators({ selectEvent,
+                              fetchEvents
+                            }, dispatch);
 }
 
 // Promote EventList from component to Container - it also needs to know about selectBook dispatch method.

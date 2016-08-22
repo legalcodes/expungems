@@ -17,8 +17,6 @@ import ReduxPromise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './Reducers';
 
-
-
 // UI COMPONENTS
 import BoxButton from './Components/BoxButton/BoxButton';
 import InfoBox from './Components/InfoBox/InfoBox';

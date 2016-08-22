@@ -11,8 +11,6 @@ function handleError(err, done, res) {
 	return res.status(500).json({success: false, data: err});
 };
 
-// load data into redux
-
 
 // READ
 
@@ -22,20 +20,21 @@ router.get('/api/v1/expungems', function(req, res){
 
 		// Get Postgres client from connection pool
 		pg.connect(connectionString, function(err, client, done){
-			if(err) {return handleError(err, done, res);}
+      if(err) {return handleError(err, done, res);}
 
 				// SQL Query > Select Data
 				var query = client.query("SELECT * FROM events ORDER BY id ASC");
 
 				// Stream results back one row at a time
 				query.on('row', function(row) {
-						results.push(row);
+          results.push(row);
 				});
 
 				// After all data is returned, close connection and return results
 				query.on('end', function() {
-						done();
-						return res.json(results);
+          done();
+
+          return res.json(results);
 				});
 		});
 });

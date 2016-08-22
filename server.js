@@ -20,7 +20,7 @@ app.use(bodyParser());
 app.use(express.static(static_path))
   .get('/', function (req, res) {
     res.sendFile('index.html', {
-      root: static_path,
+      root: static_path
     });
   }).listen(process.env.PORT || 8080, function (err) {
     if (err) {
