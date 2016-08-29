@@ -1,4 +1,11 @@
-export default function(state = null, action) {
+import FETCH_EVENTS from "../Actions/index";
+
+export default function(state = [], action) {
+  switch (action.type) {
+    case FETCH_EVENTS:
+      console.log("Action from reducer: ", action);
+      return [ action.payload, ...state ];
+  }
   console.log("Action receieved", action);
   return state;
 }

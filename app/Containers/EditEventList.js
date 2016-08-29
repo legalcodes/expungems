@@ -12,14 +12,13 @@ import Event from '../Components/Events/Event';
 class EventList extends Component {
   constructor(props) {
     super(props);
-
-  }
-
-  componentDidMount() {
-    this.props.fetchEvents();
+    console.log('Fetch events function from props: ', props.fetchEvents );
+    props.fetchEvents();
   }
 
   renderList() {
+    console.log("Events in EditEvents Container: ", this.props.events);
+
     // return this.props.events.map((event) => {
     //   return (
 		// 		<div key={event.id}>
@@ -40,20 +39,21 @@ class EventList extends Component {
 }
 
 function mapStateToProps(state){
-		return {
-				events: state.events
-		};
+  return {
+	  events: state
+  };
 };
 
 // Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.selectEvent()
 function mapDispatchToProps(dispatch){
-    // Pass result of selectBook() to all of our reducers
-  return bindActionCreators({ selectEvent,
-                              fetchEvents
-                            }, dispatch);
+    // Pass result of fetchEvents() to all of our reducers
+  return bindActionCreators({
+    selectEvent,
+    fetchEvents
+  }, dispatch);
 }
 
-// Promote EventList from component to Container - it also needs to know about selectBook dispatch method.
+// Promote EventList from component to Container - it also needs to know about fetchEvents dispatch method.
 // selectBook is now available as props
 export default connect(mapStateToProps, mapDispatchToProps)(EventList);
 
