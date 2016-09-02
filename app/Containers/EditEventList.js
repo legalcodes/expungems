@@ -12,12 +12,14 @@ import Event from '../Components/Events/Event';
 class EventList extends Component {
   constructor(props) {
     super(props);
-    console.log('Fetch events function from props: ', props.fetchEvents );
-    props.fetchEvents();
   }
 
   renderList() {
-    console.log("Events in EditEvents Container: ", this.props.events);
+    this.props.fetchEvents()
+      .then( (events) => {
+        console.log("Fetch Events callback from EditEventList has events: ", events);
+        console.log("// this.props.events: ", this.props);
+      });
 
     // return this.props.events.map((event) => {
     //   return (
@@ -38,13 +40,11 @@ class EventList extends Component {
   }
 }
 
-function mapStateToProps(state){
-  return {
-	  events: state
-  };
+function mapStateToProps( state ){
+  return { events: state };
 };
 
-// Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.selectEvent()
+// Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.fetchEvents()
 function mapDispatchToProps(dispatch){
     // Pass result of fetchEvents() to all of our reducers
   return bindActionCreators({
