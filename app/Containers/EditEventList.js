@@ -16,7 +16,7 @@ class EventList extends Component {
   }
 
   renderList() {
-      console.log("// this.props: ", this.props);
+      console.log("// this.props.events: ", this.props.events);
 
       // .then( (events) => {
       //   console.log("Fetch Events callback from EditEventList has events: ", events);
@@ -29,14 +29,15 @@ class EventList extends Component {
         // );
       // });
 
-    // return this.props.events.map((event) => {
-      // return (
-			// 	<div key={event.id}>
-			// 			<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
-			// 			<Event key={event.id + 'bareEvent'} e={event} />
-			// 	</div>
-      // );
-    // });
+    return this.props.events.map((event) => {
+      console.log('EVENT IS BEING MAPPED: ', event);
+      return (
+				<div key={event.id}>
+						<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
+						<Event key={event.id + 'bareEvent'} e={event} />
+				</div>
+      );
+    });
   }
 
   render() {
