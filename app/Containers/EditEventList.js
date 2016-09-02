@@ -12,22 +12,30 @@ import Event from '../Components/Events/Event';
 class EventList extends Component {
   constructor(props) {
     super(props);
+    this.props.fetchEvents();
   }
 
   renderList() {
-    this.props.fetchEvents()
-      .then( (events) => {
-        console.log("Fetch Events callback from EditEventList has events: ", events);
-        console.log("// this.props.events: ", this.props);
-      });
+      console.log("// this.props: ", this.props);
+
+      // .then( (events) => {
+      //   console.log("Fetch Events callback from EditEventList has events: ", events);
+      //   console.log("// this.props.events: ", this.props);
+        // return (
+				//     <div key={event.id}>
+				// 		<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
+				// 		<Event key={event.id + 'bareEvent'} e={event} />
+				//     </div>
+        // );
+      // });
 
     // return this.props.events.map((event) => {
-    //   return (
-		// 		<div key={event.id}>
-		// 				<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
-		// 				<Event key={event.id + 'bareEvent'} e={event} />
-		// 		</div>
-    //   );
+      // return (
+			// 	<div key={event.id}>
+			// 			<EditEvent key={event.id} e={event} selectEvent={selectEvent} />
+			// 			<Event key={event.id + 'bareEvent'} e={event} />
+			// 	</div>
+      // );
     // });
   }
 
@@ -41,7 +49,7 @@ class EventList extends Component {
 }
 
 function mapStateToProps( state ){
-  return { events: state };
+  return { events: state.events };
 };
 
 // Anything returned from mapDispatchToProps() will be props on EventList Container, e.g. this.props.fetchEvents()
