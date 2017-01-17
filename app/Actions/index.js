@@ -18,6 +18,26 @@ export function fetchEvents() {
   };
 };
 
+
+// get data, send data to API w/ matching property names
+
+// export function updateEvent() {
+//   const url = ROOT_API;
+//   const result = axios
+
+//   axios({
+//     method: 'put',
+//     url: '',
+//     data: {
+//       firstName: 'Fred',
+//       lastName: 'Flintstone'
+//     }
+//   });
+// }
+
+
+
+
 // export function selectEvent(event) {
 //     console.log('An event has been selected: ', event.title );
 //     return {

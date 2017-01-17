@@ -32,12 +32,28 @@ function FieldGroup({ id, label, help }) {
 class EventForm extends React.Component {
 	constructor(props) {
     super(props);
+
+    this.state = {
+      title: "",
+      date: "",
+      time: "",
+      address: "",
+      admission: "",
+      misc: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    console.log("SUBMISSION HANDLED FOR : ", event.target.value);
+    this.setState({ date : event.target.value });
+    console.log(this.state.date);
   }
 
 	render() {
 		return (
-				<Form horizontal>
-				<FormGroup controlId="formHorizontalEmail">
+      <Form horizontal >
+				<FormGroup controlId="formHorizontalEmail" onChange={this.handleChange}>
 						<Col componentClass={ControlLabel} sm={2}>
 								Date
 						</Col>
@@ -85,11 +101,11 @@ class EventForm extends React.Component {
 				</FormGroup>
 		​
 				<Button type="submit">
-				Submit
+          Submit
 				</Button>
 		</Form>
-		)
-		}
+		);
+  }
 }
 
 export default EventForm;
