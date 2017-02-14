@@ -9,7 +9,7 @@ require('./webpack.config.js');
 
 var app = express();
 
-var port = process.env.PORT;
+var port = process.env.PORT || 8080;
 
 var static_path = path.join(__dirname, 'dist');
 
@@ -26,7 +26,7 @@ app.use(express.static(static_path))
     if (err) {
       console.log(err);
     } else {
-      console.log('Listening at localhost:', process.env.PORT);
+      console.log('Listening at localhost:', port);
     }
   });
 

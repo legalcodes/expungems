@@ -7,9 +7,10 @@ import BoxButton from '../BoxButton/BoxButton';
 import InfoBox from '../InfoBox/InfoBox';
 import TextBox from '../TextBox/TextBox';
 import FinePrint from '../FinePrint/FinePrint';
-import magbar from '../../Assets/magbar.jpg';
 
 require("./menu.css");
+const magbar = require("../../Assets/magbar.jpg");
+
 
 var frontText=<div><p> If you have a criminal record, you may have been arrested but never charged, never prosecuted, or found guilty. Still, the incident could be preventing you from achieving your goals. This problem disproportionately plagues minority communities.</p><p>Expungement is not DIY-friendly, and private legal help is expensive. ExpungeMS.org was created to address these shortcomings.</p></div>
 
@@ -37,7 +38,7 @@ export default React.createClass({
           <div className="container-fluid">
             <div className="row">
               <FinePrint grid="col-lg-10" />
-              <img src={ magbar }/>
+              <img src={ magbar } className="magbar"/>
             </div>
           </div>
         </ReactCSSTransitionGroup>
