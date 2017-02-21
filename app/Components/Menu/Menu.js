@@ -10,6 +10,7 @@ import FinePrint from '../FinePrint/FinePrint';
 
 require("./menu.css");
 const magbar = require("../../Assets/magbar.jpg");
+const atjc = require("../../Assets/atjc.jpg");
 
 
 var frontText=<div><p> If you have a criminal record, you may have been arrested but never charged, never prosecuted, or found guilty. Still, the incident could be preventing you from achieving your goals. This problem disproportionately plagues minority communities.</p><p>Expungement is not DIY-friendly, and private legal help is expensive. ExpungeMS.org was created to address these shortcomings.</p></div>
@@ -37,8 +38,11 @@ export default React.createClass({
 
           <div className="container-fluid">
             <div className="row">
-              <FinePrint grid="col-lg-10" />
-              <img src={ magbar } className="magbar"/>
+            <FinePrint grid="col-lg-10" />
+              <div className="centered-images">
+                <img src={ magbar } className="magbar"/>
+                <img src={ atjc } className="atjc"/>
+              </div>
             </div>
           </div>
         </ReactCSSTransitionGroup>
