@@ -16,33 +16,33 @@ class EventList extends Component {
 		render () {
 				return (
           <div>
-              <ul className="list-group col-lg-12">
-                  {this.renderList()}
-              </ul>
-              <div className="partner-list-container">
+            <ul className="list-group col-lg-12">
+              {this.renderList()}
+            </ul>
+            <div className="partner-list-container">
 
-                Thanks to the following organizations:
-                <p className="partner-container">
-                  <h4>Mission First Legal Aid Office</h4>
-                  <div ><a className="partner-link" href="http://www.missionfirst.org">www.missionfirst.org</a></div>
-                  <div>601-608-0056</div>
-                  <div>Hinds, Madison and Rankin Counties Only</div>
-                </p>
+              The following organizations provide free legal assistance to Mississippians who wish to expunge their criminal records
+              <p className="partner-container">
+                <h4>Mission First Legal Aid Office</h4>
+                <div ><a className="partner-link" href="http://www.missionfirst.org">www.missionfirst.org</a></div>
+                <div>601-608-0056</div>
+                <div>Hinds, Madison and Rankin Counties Only</div>
+              </p>
 
-                <p className="partner-container">
-                  <h4>Mississippi Center for Justice</h4>
-                  <div><a className="partner-link" href="http://www.mscenterforjustice.org">www.mscenterforjustice.org</a></div>
-                  <div>228-435-7284</div>
-                  <div>Statewide assistance</div>
-                </p>
+              <p className="partner-container">
+                <h4>Mississippi Center for Justice</h4>
+                <div><a className="partner-link" href="http://www.mscenterforjustice.org">www.mscenterforjustice.org</a></div>
+                <div>228-435-7284</div>
+                <div>Statewide assistance</div>
+              </p>
 
-                <p className="partner-container">
-                  <h4>North Mississippi Rural Legal Services</h4>
-                  <div><a className="partner-link" href="http://www.nmrls.com">www.nmrls.com</a></div>
-                  <div>1-800-498-1804</div>
-                  <div>North Mississippi and Delta</div>
-                </p>
-              </div>
+              <p className="partner-container">
+                <h4>North Mississippi Rural Legal Services</h4>
+                <div><a className="partner-link" href="http://www.nmrls.com">www.nmrls.com</a></div>
+                <div>1-800-498-1804</div>
+                <div>North Mississippi and Delta</div>
+              </p>
+            </div>
           </div>
 				);
 		}
